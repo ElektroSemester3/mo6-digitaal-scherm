@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lscho/Documents/GitHub/Digitaal-MO6-Pong/ScreenGen/WhiteScreenGen/WhiteScreenGen.sim/sim_1/impl/func/xsim/design_1_wrapper_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_WhiteScreenGen_0_0'
+INFO: [VRFC 10-3107] analyzing entity 'design_1'
+INFO: [VRFC 10-3107] analyzing entity 'design_1_wrapper'
