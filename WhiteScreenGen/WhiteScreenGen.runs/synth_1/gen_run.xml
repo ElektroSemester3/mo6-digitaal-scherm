@@ -86,7 +86,7 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_VGA_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_WhiteScreenGen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_VGA_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_clk_wiz_0"/>
 </GenRun>
