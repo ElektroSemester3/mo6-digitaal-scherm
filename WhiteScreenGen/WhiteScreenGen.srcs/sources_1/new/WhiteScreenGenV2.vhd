@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity VGA is
   port(
       CLK, RST: in STD_LOGIC;
-      VCLK, HSYNC, VSYNC: out STD_LOGIC;
+      pxlCLK, HSYNC, VSYNC: out STD_LOGIC;
       R, G, B: out STD_LOGIC;
       vpxl, hpxl: out STD_LOGIC_VECTOR (9 downto 0)
       );
@@ -35,7 +35,7 @@ architecture rtl of VGA is
 begin
 
 -- outputs
-VCLK <= clk25;
+pxlCLK <= clk25;
 
 clk_div:process(CLK)
 begin

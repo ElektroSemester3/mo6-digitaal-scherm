@@ -1,25 +1,39 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA18C5AD98E03D895",
+      "boundary_crc": "0x604F2CB25CC51C",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../WhiteScreenGen.gen/sources_1/bd/design_2",
       "name": "design_2",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "clk_wiz": "",
-      "VGA_0": ""
+      "VGA_0": "",
+      "Universal_signal_del_0": ""
     },
     "ports": {
       "sys_clock": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_2_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -43,6 +57,15 @@
       },
       "rst": {
         "direction": "I"
+      },
+      "pxlClkOut": {
+        "direction": "O"
+      },
+      "hpxlOut": {
+        "direction": "O"
+      },
+      "vPxlOut": {
+        "direction": "O"
       }
     },
     "components": {
@@ -87,6 +110,18 @@
               "ASSOCIATED_RESET": {
                 "value": "RST",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
               }
             }
           },
@@ -94,7 +129,7 @@
             "type": "rst",
             "direction": "I"
           },
-          "VCLK": {
+          "pxlCLK": {
             "direction": "O"
           },
           "HSYNC": {
@@ -123,9 +158,99 @@
             "right": "0"
           }
         }
+      },
+      "Universal_signal_del_0": {
+        "vlnv": "xilinx.com:module_ref:Universal_signal_delay:1.0",
+        "xci_name": "design_2_Universal_signal_del_0_1",
+        "xci_path": "ip\\design_2_Universal_signal_del_0_1\\design_2_Universal_signal_del_0_1.xci",
+        "inst_hier_path": "Universal_signal_del_0",
+        "parameters": {
+          "hPxlDelay": {
+            "value": "5"
+          },
+          "hSyncDelay": {
+            "value": "5"
+          },
+          "pxlClkDelay": {
+            "value": "5"
+          },
+          "vPxlDelay": {
+            "value": "5"
+          },
+          "vSyncDelay": {
+            "value": "5"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Universal_signal_delay",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "hSyncIn": {
+            "direction": "I"
+          },
+          "vSyncIn": {
+            "direction": "I"
+          },
+          "pxlClkIn": {
+            "direction": "I"
+          },
+          "hPxlIn": {
+            "direction": "I"
+          },
+          "vPxlIn": {
+            "direction": "I"
+          },
+          "hSyncOut": {
+            "direction": "O"
+          },
+          "vSyncOut": {
+            "direction": "O"
+          },
+          "pxlClkOut": {
+            "direction": "O"
+          },
+          "hPxlOut": {
+            "direction": "O"
+          },
+          "vPxlOut": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
+      "Universal_signal_del_0_hPxlOut": {
+        "ports": [
+          "Universal_signal_del_0/hPxlOut",
+          "hpxlOut"
+        ]
+      },
+      "Universal_signal_del_0_hSyncOut": {
+        "ports": [
+          "Universal_signal_del_0/hSyncOut",
+          "HSYNC"
+        ]
+      },
+      "Universal_signal_del_0_pxlClkOut": {
+        "ports": [
+          "Universal_signal_del_0/pxlClkOut",
+          "pxlClkOut"
+        ]
+      },
+      "Universal_signal_del_0_vPxlOut": {
+        "ports": [
+          "Universal_signal_del_0/vPxlOut",
+          "vPxlOut"
+        ]
+      },
+      "Universal_signal_del_0_vSyncOut": {
+        "ports": [
+          "Universal_signal_del_0/vSyncOut",
+          "VSYNC"
+        ]
+      },
       "VGA_0_B": {
         "ports": [
           "VGA_0/B",
@@ -141,7 +266,7 @@
       "VGA_0_HSYNC": {
         "ports": [
           "VGA_0/HSYNC",
-          "HSYNC"
+          "Universal_signal_del_0/hSyncIn"
         ]
       },
       "VGA_0_R": {
@@ -153,7 +278,25 @@
       "VGA_0_VSYNC": {
         "ports": [
           "VGA_0/VSYNC",
-          "VSYNC"
+          "Universal_signal_del_0/vSyncIn"
+        ]
+      },
+      "VGA_0_hpxl": {
+        "ports": [
+          "VGA_0/hpxl",
+          "Universal_signal_del_0/hPxlIn"
+        ]
+      },
+      "VGA_0_pxlCLK": {
+        "ports": [
+          "VGA_0/pxlCLK",
+          "Universal_signal_del_0/pxlClkIn"
+        ]
+      },
+      "VGA_0_vpxl": {
+        "ports": [
+          "VGA_0/vpxl",
+          "Universal_signal_del_0/vPxlIn"
         ]
       },
       "clk_wiz_clk_out1": {
