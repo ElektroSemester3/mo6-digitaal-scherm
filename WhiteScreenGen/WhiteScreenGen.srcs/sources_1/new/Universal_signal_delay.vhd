@@ -30,31 +30,34 @@ end Universal_signal_delay;
 architecture Behavioral of Universal_signal_delay is
 
     --internal used shift registers
-    signal SR_hSync  :   unsigned(5 downto 0) := (others => '0');
-    signal SR_vSync  :   unsigned(5 downto 0) := (others => '0');
-    -- signal SR_pxlClk :   unsigned(5 downto 0);
-    signal SR_hPxl   :   unsigned(5 downto 0) := (others => '0');
-    signal SR_vPxl   :   unsigned(5 downto 0) := (others => '0');
+    signal SR_hSync  :   unsigned(hSyncDelay downto 0) := (others => '0');
+    signal SR_vSync  :   unsigned(vSyncDelay downto 0) := (others => '0');
+    signal SR_hPxl   :   unsigned(hPxlDelay downto 0) := (others => '0');
+    signal SR_vPxl   :   unsigned(vPxlDelay downto 0) := (others => '0');
  
 begin
     pxlClkOut       <= pxlClkIn;
     process(pxlClkIn)
     begin
         if rising_edge(pxlClkIn)then
-            SR_hSync(SR_hSync'LOW)     <= hSyncIn;
-            SR_vSync(SR_vSync'LOW)     <= vSyncIn;
-            -- SR_pxlClk(0)    <= pxlClkIn;
-            SR_hPxl(SR_hPxl'LOW)      <= hPxlIn;
-            SR_vPxl(SR_vPxl'LOW)      <= vPxlIn;
-            SR_hSync        <= shift_left(SR_hSync,1);
-            SR_vSync        <= shift_left(SR_vSync,1);
-            -- SR_pxlClk       <= shift_left(SR_pxlClk,1);
-            SR_hPxl         <= shift_left(SR_hPxl,1);
-            SR_vPxl         <= shift_left(SR_vPxl,1);
-            hSyncOut        <= SR_hSync(SR_hSync'HIGH);
-            vSyncOut        <= SR_vSync(SR_vSync'HIGH);
-            hPxlOut         <= SR_hPxl(SR_hPxl'HIGH);
-            vPxlOut         <= SR_vPxl(SR_vPxl'HIGH);
+            
+            --shift the signals 1 spot left
+            SR_hSync                 <= shift_left(SR_hSync,1);
+            SR_vSync                 <= shift_left(SR_vSync,1);
+            SR_hPxl                  <= shift_left(SR_hPxl,1);
+            SR_vPxl                  <= shift_left(SR_vPxl,1);
+            
+            --set the new values in the first bit
+            SR_hSync(SR_hSync'LOW)   <= hSyncIn;
+            SR_vSync(SR_vSync'LOW)   <= vSyncIn;
+            SR_hPxl(SR_hPxl'LOW)     <= hPxlIn;
+            SR_vPxl(SR_vPxl'LOW)     <= vPxlIn;
+
+            --read the last bit and set it to the output
+            hSyncOut                 <= SR_hSync(SR_hSync'HIGH);
+            vSyncOut                 <= SR_vSync(SR_vSync'HIGH);
+            hPxlOut                  <= SR_hPxl(SR_hPxl'HIGH);
+            vPxlOut                  <= SR_vPxl(SR_vPxl'HIGH);
         end if;
     end process;
 end Behavioral;

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/design_2_wrapper.tcl"
+  variable script "C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/design_2_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,23 +77,23 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.cache/wt [current_project]
-set_property parent.project_path C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.cache/wt [current_project]
+set_property parent.project_path C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/lscho/Downloads/pynq-z2/pynq-z2} [current_project]
+set_property board_part_repo_paths {C:/Users/lscho/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.cache/ip [current_project]
+set_property ip_output_repo c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hdl/design_2_wrapper.vhd
-add_files C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd
-set_property used_in_implementation false [get_files -all c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/design_2_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hdl/design_2_wrapper.vhd
+add_files C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd
+set_property used_in_implementation false [get_files -all c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/design_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -104,14 +104,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc
-set_property used_in_implementation false [get_files C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+read_xdc C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc
+set_property used_in_implementation false [get_files C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/utils_1/imports/synth_1/WhiteScreenGen.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/utils_1/imports/synth_1/WhiteScreenGen.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
