@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Nov  7 14:26:27 2023
+--Date        : Thu Nov  9 17:10:03 2023
 --Host        : LaptopVanLars running 64-bit major release  (build 9200)
 --Command     : generate_target design_2.bd
 --Design      : design_2
@@ -19,16 +19,13 @@ entity design_2 is
     HSYNC : out STD_LOGIC;
     R : out STD_LOGIC;
     VSYNC : out STD_LOGIC;
-    hpxlOut : out STD_LOGIC;
-    pxlClkOut : out STD_LOGIC;
     rst : in STD_LOGIC;
-    sys_clock : in STD_LOGIC;
-    vPxlOut : out STD_LOGIC
+    sys_clock : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_2 : entity is "design_2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_2,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=1,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_2 : entity is "design_2.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of design_2 : entity is "design_2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_2,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=1,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of design_2 : entity is "design_2.hwdef";
 end design_2;
 
 architecture STRUCTURE of design_2 is
@@ -68,10 +65,7 @@ architecture STRUCTURE of design_2 is
     vPxlOut : out STD_LOGIC
   );
   end component design_2_Universal_signal_del_0_1;
-  signal Universal_signal_del_0_hPxlOut : STD_LOGIC;
   signal Universal_signal_del_0_hSyncOut : STD_LOGIC;
-  signal Universal_signal_del_0_pxlClkOut : STD_LOGIC;
-  signal Universal_signal_del_0_vPxlOut : STD_LOGIC;
   signal Universal_signal_del_0_vSyncOut : STD_LOGIC;
   signal VGA_0_B : STD_LOGIC;
   signal VGA_0_G : STD_LOGIC;
@@ -84,32 +78,32 @@ architecture STRUCTURE of design_2 is
   signal clk_wiz_clk_out1 : STD_LOGIC;
   signal rst_1 : STD_LOGIC;
   signal sys_clock_1 : STD_LOGIC;
+  signal NLW_Universal_signal_del_0_hPxlOut_UNCONNECTED : STD_LOGIC;
+  signal NLW_Universal_signal_del_0_pxlClkOut_UNCONNECTED : STD_LOGIC;
+  signal NLW_Universal_signal_del_0_vPxlOut_UNCONNECTED : STD_LOGIC;
   signal NLW_clk_wiz_locked_UNCONNECTED : STD_LOGIC;
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_2_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info : string;
+  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_2_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
   B <= VGA_0_B;
   G <= VGA_0_G;
   HSYNC <= Universal_signal_del_0_hSyncOut;
   R <= VGA_0_R;
   VSYNC <= Universal_signal_del_0_vSyncOut;
-  hpxlOut <= Universal_signal_del_0_hPxlOut;
-  pxlClkOut <= Universal_signal_del_0_pxlClkOut;
   rst_1 <= rst;
   sys_clock_1 <= sys_clock;
-  vPxlOut <= Universal_signal_del_0_vPxlOut;
 Universal_signal_del_0: component design_2_Universal_signal_del_0_1
      port map (
       hPxlIn => VGA_0_hpxl(0),
-      hPxlOut => Universal_signal_del_0_hPxlOut,
+      hPxlOut => NLW_Universal_signal_del_0_hPxlOut_UNCONNECTED,
       hSyncIn => VGA_0_HSYNC,
       hSyncOut => Universal_signal_del_0_hSyncOut,
       pxlClkIn => VGA_0_pxlCLK,
-      pxlClkOut => Universal_signal_del_0_pxlClkOut,
+      pxlClkOut => NLW_Universal_signal_del_0_pxlClkOut_UNCONNECTED,
       vPxlIn => VGA_0_vpxl(0),
-      vPxlOut => Universal_signal_del_0_vPxlOut,
+      vPxlOut => NLW_Universal_signal_del_0_vPxlOut_UNCONNECTED,
       vSyncIn => VGA_0_VSYNC,
       vSyncOut => Universal_signal_del_0_vSyncOut
     );

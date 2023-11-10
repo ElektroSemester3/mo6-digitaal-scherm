@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Nov  7 14:27:35 2023
+// Date        : Thu Nov  9 17:10:54 2023
 // Host        : LaptopVanLars running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1_sim_netlist.v
@@ -39,10 +39,11 @@ module design_2_Universal_signal_del_0_1
   output vPxlOut;
 
   wire \<const0> ;
+  wire pxlClkIn;
 
   assign hPxlOut = \<const0> ;
   assign hSyncOut = \<const0> ;
-  assign pxlClkOut = \<const0> ;
+  assign pxlClkOut = pxlClkIn;
   assign vPxlOut = \<const0> ;
   assign vSyncOut = \<const0> ;
   GND GND

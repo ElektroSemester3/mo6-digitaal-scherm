@@ -95,11 +95,11 @@ ARCHITECTURE design_2_Universal_signal_del_0_1_arch OF design_2_Universal_signal
 BEGIN
   U0 : Universal_signal_delay
     GENERIC MAP (
-      hSyncDelay => 5,
-      vSyncDelay => 5,
-      pxlClkDelay => 5,
-      vPxlDelay => 5,
-      hPxlDelay => 5
+      hSyncDelay => 1,
+      vSyncDelay => 1,
+      pxlClkDelay => 1,
+      vPxlDelay => 1,
+      hPxlDelay => 1
     )
     PORT MAP (
       hSyncIn => hSyncIn,

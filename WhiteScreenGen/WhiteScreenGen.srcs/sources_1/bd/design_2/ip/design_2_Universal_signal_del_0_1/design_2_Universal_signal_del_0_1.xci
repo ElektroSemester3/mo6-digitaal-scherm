@@ -8,19 +8,19 @@
     "gen_directory": "../../../../../../WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1",
     "parameters": {
       "component_parameters": {
-        "hSyncDelay": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "vSyncDelay": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "pxlClkDelay": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "vPxlDelay": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "hPxlDelay": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "hSyncDelay": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "vSyncDelay": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "pxlClkDelay": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "vPxlDelay": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "hPxlDelay": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_2_Universal_signal_del_0_1", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "hSyncDelay": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "vSyncDelay": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "pxlClkDelay": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "vPxlDelay": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "hPxlDelay": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+        "hSyncDelay": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "vSyncDelay": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "pxlClkDelay": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "vPxlDelay": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "hPxlDelay": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],

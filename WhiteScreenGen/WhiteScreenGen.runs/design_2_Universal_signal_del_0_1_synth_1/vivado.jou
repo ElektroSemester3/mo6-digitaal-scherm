@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Nov  7 14:26:33 2023
-# Process ID: 13308
+# Start of session at: Thu Nov  9 17:10:09 2023
+# Process ID: 24380
 # Current directory: C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1
 # Command line: vivado.exe -log design_2_Universal_signal_del_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_2_Universal_signal_del_0_1.tcl
 # Log file: C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1/design_2_Universal_signal_del_0_1.vds

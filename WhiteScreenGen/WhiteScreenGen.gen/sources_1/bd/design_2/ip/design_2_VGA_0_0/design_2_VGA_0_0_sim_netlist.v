@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Nov  7 14:21:23 2023
+// Date        : Wed Nov  8 10:23:43 2023
 // Host        : LaptopVanLars running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_VGA_0_0/design_2_VGA_0_0_sim_netlist.v
@@ -41,6 +41,7 @@ module design_2_VGA_0_0
   wire \<const0> ;
   wire CLK;
   wire HSYNC;
+  wire R;
   wire RST;
   wire VSYNC;
   wire [9:0]hpxl;
@@ -49,12 +50,12 @@ module design_2_VGA_0_0
 
   assign B = \<const0> ;
   assign G = \<const0> ;
-  assign R = \<const0> ;
   GND GND
        (.G(\<const0> ));
   design_2_VGA_0_0_VGA U0
        (.CLK(CLK),
         .HSYNC(HSYNC),
+        .R(R),
         .RST(RST),
         .VSYNC(VSYNC),
         .hpxl(hpxl),
@@ -67,6 +68,7 @@ module design_2_VGA_0_0_VGA
    (pxlCLK,
     HSYNC,
     VSYNC,
+    R,
     vpxl,
     hpxl,
     CLK,
@@ -74,6 +76,7 @@ module design_2_VGA_0_0_VGA
   output pxlCLK;
   output HSYNC;
   output VSYNC;
+  output R;
   output [9:0]vpxl;
   output [9:0]hpxl;
   input CLK;
@@ -82,9 +85,71 @@ module design_2_VGA_0_0_VGA
   wire CLK;
   wire HSYNC;
   wire HSYNC_i_1_n_0;
+  wire R;
   wire RST;
   wire VSYNC;
   wire [31:1]data0;
+  wire de;
+  wire de0;
+  wire de1;
+  wire de10_in;
+  wire de_i_10_n_0;
+  wire de_i_11_n_0;
+  wire de_i_12_n_0;
+  wire de_i_13_n_0;
+  wire de_i_15_n_0;
+  wire de_i_16_n_0;
+  wire de_i_17_n_0;
+  wire de_i_18_n_0;
+  wire de_i_20_n_0;
+  wire de_i_21_n_0;
+  wire de_i_22_n_0;
+  wire de_i_23_n_0;
+  wire de_i_25_n_0;
+  wire de_i_26_n_0;
+  wire de_i_27_n_0;
+  wire de_i_28_n_0;
+  wire de_i_29_n_0;
+  wire de_i_30_n_0;
+  wire de_i_31_n_0;
+  wire de_i_32_n_0;
+  wire de_i_33_n_0;
+  wire de_i_34_n_0;
+  wire de_i_35_n_0;
+  wire de_i_36_n_0;
+  wire de_i_37_n_0;
+  wire de_i_38_n_0;
+  wire de_i_39_n_0;
+  wire de_i_40_n_0;
+  wire de_i_41_n_0;
+  wire de_i_5_n_0;
+  wire de_i_7_n_0;
+  wire de_i_8_n_0;
+  wire de_reg_i_14_n_0;
+  wire de_reg_i_14_n_1;
+  wire de_reg_i_14_n_2;
+  wire de_reg_i_14_n_3;
+  wire de_reg_i_19_n_0;
+  wire de_reg_i_19_n_1;
+  wire de_reg_i_19_n_2;
+  wire de_reg_i_19_n_3;
+  wire de_reg_i_24_n_0;
+  wire de_reg_i_24_n_1;
+  wire de_reg_i_24_n_2;
+  wire de_reg_i_24_n_3;
+  wire de_reg_i_3_n_3;
+  wire de_reg_i_4_n_0;
+  wire de_reg_i_4_n_1;
+  wire de_reg_i_4_n_2;
+  wire de_reg_i_4_n_3;
+  wire de_reg_i_6_n_0;
+  wire de_reg_i_6_n_1;
+  wire de_reg_i_6_n_2;
+  wire de_reg_i_6_n_3;
+  wire de_reg_i_9_n_0;
+  wire de_reg_i_9_n_1;
+  wire de_reg_i_9_n_2;
+  wire de_reg_i_9_n_3;
   wire [31:0]hPos;
   wire \hPos[31]_i_10_n_0 ;
   wire \hPos[31]_i_11_n_0 ;
@@ -162,7 +227,7 @@ module design_2_VGA_0_0_VGA
   wire [9:0]hpxl;
   wire hs;
   wire hs2;
-  wire hs21_in;
+  wire hs22_in;
   wire hs2_carry__0_i_1_n_0;
   wire hs2_carry__0_i_2_n_0;
   wire hs2_carry__0_i_3_n_0;
@@ -299,11 +364,13 @@ module design_2_VGA_0_0_VGA
   wire \vPos[30]_i_1_n_0 ;
   wire \vPos[31]_i_10_n_0 ;
   wire \vPos[31]_i_11_n_0 ;
+  wire \vPos[31]_i_12_n_0 ;
+  wire \vPos[31]_i_13_n_0 ;
   wire \vPos[31]_i_2_n_0 ;
+  wire \vPos[31]_i_3_n_0 ;
   wire \vPos[31]_i_4_n_0 ;
   wire \vPos[31]_i_5_n_0 ;
   wire \vPos[31]_i_6_n_0 ;
-  wire \vPos[31]_i_7_n_0 ;
   wire \vPos[31]_i_8_n_0 ;
   wire \vPos[31]_i_9_n_0 ;
   wire \vPos[3]_i_1_n_0 ;
@@ -353,11 +420,11 @@ module design_2_VGA_0_0_VGA
   wire \vPos_reg[28]_i_2_n_5 ;
   wire \vPos_reg[28]_i_2_n_6 ;
   wire \vPos_reg[28]_i_2_n_7 ;
-  wire \vPos_reg[31]_i_3_n_2 ;
-  wire \vPos_reg[31]_i_3_n_3 ;
-  wire \vPos_reg[31]_i_3_n_5 ;
-  wire \vPos_reg[31]_i_3_n_6 ;
-  wire \vPos_reg[31]_i_3_n_7 ;
+  wire \vPos_reg[31]_i_7_n_2 ;
+  wire \vPos_reg[31]_i_7_n_3 ;
+  wire \vPos_reg[31]_i_7_n_5 ;
+  wire \vPos_reg[31]_i_7_n_6 ;
+  wire \vPos_reg[31]_i_7_n_7 ;
   wire \vPos_reg[4]_i_2_n_0 ;
   wire \vPos_reg[4]_i_2_n_1 ;
   wire \vPos_reg[4]_i_2_n_2 ;
@@ -409,7 +476,7 @@ module design_2_VGA_0_0_VGA
   wire [9:0]vpxl;
   wire vs;
   wire vs2;
-  wire vs20_in;
+  wire vs21_in;
   wire vs2_carry__0_i_1_n_0;
   wire vs2_carry__0_i_2_n_0;
   wire vs2_carry__0_i_3_n_0;
@@ -459,6 +526,16 @@ module design_2_VGA_0_0_VGA
   wire \vs2_inferred__0/i__carry_n_2 ;
   wire \vs2_inferred__0/i__carry_n_3 ;
   wire vs_i_1_n_0;
+  wire [3:0]NLW_de_reg_i_14_O_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_19_O_UNCONNECTED;
+  wire [3:1]NLW_de_reg_i_2_CO_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_2_O_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_24_O_UNCONNECTED;
+  wire [3:2]NLW_de_reg_i_3_CO_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_3_O_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_4_O_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_6_O_UNCONNECTED;
+  wire [3:0]NLW_de_reg_i_9_O_UNCONNECTED;
   wire [3:2]\NLW_hPos_reg[31]_i_6_CO_UNCONNECTED ;
   wire [3:3]\NLW_hPos_reg[31]_i_6_O_UNCONNECTED ;
   wire [3:0]NLW_hs2_carry_O_UNCONNECTED;
@@ -470,8 +547,8 @@ module design_2_VGA_0_0_VGA
   wire [3:0]\NLW_hs2_inferred__0/i__carry__0_O_UNCONNECTED ;
   wire [3:0]\NLW_hs2_inferred__0/i__carry__1_O_UNCONNECTED ;
   wire [3:0]\NLW_hs2_inferred__0/i__carry__2_O_UNCONNECTED ;
-  wire [3:2]\NLW_vPos_reg[31]_i_3_CO_UNCONNECTED ;
-  wire [3:3]\NLW_vPos_reg[31]_i_3_O_UNCONNECTED ;
+  wire [3:2]\NLW_vPos_reg[31]_i_7_CO_UNCONNECTED ;
+  wire [3:3]\NLW_vPos_reg[31]_i_7_O_UNCONNECTED ;
   wire [3:0]NLW_vs2_carry_O_UNCONNECTED;
   wire [3:0]NLW_vs2_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_vs2_carry__1_O_UNCONNECTED;
@@ -493,6 +570,12 @@ module design_2_VGA_0_0_VGA
         .CLR(HSYNC_i_1_n_0),
         .D(hs),
         .Q(HSYNC));
+  FDCE R_reg
+       (.C(pxlCLK),
+        .CE(1'b1),
+        .CLR(HSYNC_i_1_n_0),
+        .D(de),
+        .Q(R));
   FDCE VSYNC_reg
        (.C(pxlCLK),
         .CE(1'b1),
@@ -512,6 +595,273 @@ module design_2_VGA_0_0_VGA
         .D(p_0_in),
         .Q(pxlCLK),
         .R(1'b0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    de_i_1
+       (.I0(de10_in),
+        .I1(de1),
+        .O(de0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_10
+       (.I0(\hPos_reg_n_0_[29] ),
+        .I1(\hPos_reg_n_0_[28] ),
+        .O(de_i_10_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_11
+       (.I0(\hPos_reg_n_0_[27] ),
+        .I1(\hPos_reg_n_0_[26] ),
+        .O(de_i_11_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_12
+       (.I0(\hPos_reg_n_0_[25] ),
+        .I1(\hPos_reg_n_0_[24] ),
+        .O(de_i_12_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_13
+       (.I0(\hPos_reg_n_0_[23] ),
+        .I1(\hPos_reg_n_0_[22] ),
+        .O(de_i_13_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_15
+       (.I0(\vPos_reg_n_0_[27] ),
+        .I1(\vPos_reg_n_0_[26] ),
+        .O(de_i_15_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_16
+       (.I0(\vPos_reg_n_0_[25] ),
+        .I1(\vPos_reg_n_0_[24] ),
+        .O(de_i_16_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_17
+       (.I0(\vPos_reg_n_0_[23] ),
+        .I1(\vPos_reg_n_0_[22] ),
+        .O(de_i_17_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_18
+       (.I0(\vPos_reg_n_0_[21] ),
+        .I1(\vPos_reg_n_0_[20] ),
+        .O(de_i_18_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_20
+       (.I0(\hPos_reg_n_0_[21] ),
+        .I1(\hPos_reg_n_0_[20] ),
+        .O(de_i_20_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_21
+       (.I0(\hPos_reg_n_0_[19] ),
+        .I1(\hPos_reg_n_0_[18] ),
+        .O(de_i_21_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_22
+       (.I0(\hPos_reg_n_0_[17] ),
+        .I1(\hPos_reg_n_0_[16] ),
+        .O(de_i_22_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_23
+       (.I0(\hPos_reg_n_0_[15] ),
+        .I1(\hPos_reg_n_0_[14] ),
+        .O(de_i_23_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_25
+       (.I0(\vPos_reg_n_0_[19] ),
+        .I1(\vPos_reg_n_0_[18] ),
+        .O(de_i_25_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_26
+       (.I0(\vPos_reg_n_0_[17] ),
+        .I1(\vPos_reg_n_0_[16] ),
+        .O(de_i_26_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_27
+       (.I0(\vPos_reg_n_0_[15] ),
+        .I1(\vPos_reg_n_0_[14] ),
+        .O(de_i_27_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_28
+       (.I0(\vPos_reg_n_0_[13] ),
+        .I1(\vPos_reg_n_0_[12] ),
+        .O(de_i_28_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    de_i_29
+       (.I0(\hPos_reg_n_0_[9] ),
+        .O(de_i_29_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    de_i_30
+       (.I0(\hPos_reg_n_0_[7] ),
+        .O(de_i_30_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_31
+       (.I0(\hPos_reg_n_0_[13] ),
+        .I1(\hPos_reg_n_0_[12] ),
+        .O(de_i_31_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_32
+       (.I0(\hPos_reg_n_0_[11] ),
+        .I1(\hPos_reg_n_0_[10] ),
+        .O(de_i_32_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    de_i_33
+       (.I0(\hPos_reg_n_0_[9] ),
+        .I1(\hPos_reg_n_0_[8] ),
+        .O(de_i_33_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    de_i_34
+       (.I0(\hPos_reg_n_0_[7] ),
+        .I1(\hPos_reg_n_0_[6] ),
+        .O(de_i_34_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_35
+       (.I0(\vPos_reg_n_0_[8] ),
+        .I1(\vPos_reg_n_0_[9] ),
+        .O(de_i_35_n_0));
+  LUT2 #(
+    .INIT(4'h7)) 
+    de_i_36
+       (.I0(\vPos_reg_n_0_[6] ),
+        .I1(\vPos_reg_n_0_[7] ),
+        .O(de_i_36_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    de_i_37
+       (.I0(\vPos_reg_n_0_[5] ),
+        .O(de_i_37_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_38
+       (.I0(\vPos_reg_n_0_[11] ),
+        .I1(\vPos_reg_n_0_[10] ),
+        .O(de_i_38_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    de_i_39
+       (.I0(\vPos_reg_n_0_[8] ),
+        .I1(\vPos_reg_n_0_[9] ),
+        .O(de_i_39_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    de_i_40
+       (.I0(\vPos_reg_n_0_[6] ),
+        .I1(\vPos_reg_n_0_[7] ),
+        .O(de_i_40_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    de_i_41
+       (.I0(\vPos_reg_n_0_[5] ),
+        .I1(\vPos_reg_n_0_[4] ),
+        .O(de_i_41_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_5
+       (.I0(\hPos_reg_n_0_[31] ),
+        .I1(\hPos_reg_n_0_[30] ),
+        .O(de_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_7
+       (.I0(\vPos_reg_n_0_[31] ),
+        .I1(\vPos_reg_n_0_[30] ),
+        .O(de_i_7_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    de_i_8
+       (.I0(\vPos_reg_n_0_[29] ),
+        .I1(\vPos_reg_n_0_[28] ),
+        .O(de_i_8_n_0));
+  FDCE #(
+    .INIT(1'b0)) 
+    de_reg
+       (.C(pxlCLK),
+        .CE(1'b1),
+        .CLR(HSYNC_i_1_n_0),
+        .D(de0),
+        .Q(de));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_14
+       (.CI(de_reg_i_24_n_0),
+        .CO({de_reg_i_14_n_0,de_reg_i_14_n_1,de_reg_i_14_n_2,de_reg_i_14_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_de_reg_i_14_O_UNCONNECTED[3:0]),
+        .S({de_i_25_n_0,de_i_26_n_0,de_i_27_n_0,de_i_28_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_19
+       (.CI(1'b0),
+        .CO({de_reg_i_19_n_0,de_reg_i_19_n_1,de_reg_i_19_n_2,de_reg_i_19_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,de_i_29_n_0,de_i_30_n_0}),
+        .O(NLW_de_reg_i_19_O_UNCONNECTED[3:0]),
+        .S({de_i_31_n_0,de_i_32_n_0,de_i_33_n_0,de_i_34_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_2
+       (.CI(de_reg_i_4_n_0),
+        .CO({NLW_de_reg_i_2_CO_UNCONNECTED[3:1],de10_in}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,\hPos_reg_n_0_[31] }),
+        .O(NLW_de_reg_i_2_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,1'b0,de_i_5_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_24
+       (.CI(1'b0),
+        .CO({de_reg_i_24_n_0,de_reg_i_24_n_1,de_reg_i_24_n_2,de_reg_i_24_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,de_i_35_n_0,de_i_36_n_0,de_i_37_n_0}),
+        .O(NLW_de_reg_i_24_O_UNCONNECTED[3:0]),
+        .S({de_i_38_n_0,de_i_39_n_0,de_i_40_n_0,de_i_41_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_3
+       (.CI(de_reg_i_6_n_0),
+        .CO({NLW_de_reg_i_3_CO_UNCONNECTED[3:2],de1,de_reg_i_3_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,\vPos_reg_n_0_[31] ,1'b0}),
+        .O(NLW_de_reg_i_3_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,de_i_7_n_0,de_i_8_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_4
+       (.CI(de_reg_i_9_n_0),
+        .CO({de_reg_i_4_n_0,de_reg_i_4_n_1,de_reg_i_4_n_2,de_reg_i_4_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_de_reg_i_4_O_UNCONNECTED[3:0]),
+        .S({de_i_10_n_0,de_i_11_n_0,de_i_12_n_0,de_i_13_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_6
+       (.CI(de_reg_i_14_n_0),
+        .CO({de_reg_i_6_n_0,de_reg_i_6_n_1,de_reg_i_6_n_2,de_reg_i_6_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_de_reg_i_6_O_UNCONNECTED[3:0]),
+        .S({de_i_15_n_0,de_i_16_n_0,de_i_17_n_0,de_i_18_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 de_reg_i_9
+       (.CI(de_reg_i_19_n_0),
+        .CO({de_reg_i_9_n_0,de_reg_i_9_n_1,de_reg_i_9_n_2,de_reg_i_9_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_de_reg_i_9_O_UNCONNECTED[3:0]),
+        .S({de_i_20_n_0,de_i_21_n_0,de_i_22_n_0,de_i_23_n_0}));
   LUT1 #(
     .INIT(2'h1)) 
     \hPos[0]_i_1 
@@ -1397,15 +1747,15 @@ module design_2_VGA_0_0_VGA
        (.CI(1'b0),
         .CO({\hs2_inferred__0/i__carry_n_0 ,\hs2_inferred__0/i__carry_n_1 ,\hs2_inferred__0/i__carry_n_2 ,\hs2_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b1),
-        .DI({i__carry_i_1_n_0,\hPos_reg_n_0_[5] ,i__carry_i_2_n_0,i__carry_i_3_n_0}),
+        .DI({i__carry_i_1__0_n_0,\hPos_reg_n_0_[5] ,i__carry_i_2_n_0,i__carry_i_3_n_0}),
         .O(\NLW_hs2_inferred__0/i__carry_O_UNCONNECTED [3:0]),
-        .S({i__carry_i_4__0_n_0,i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0}));
+        .S({i__carry_i_4__0_n_0,i__carry_i_5_n_0,i__carry_i_6__0_n_0,i__carry_i_7_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \hs2_inferred__0/i__carry__0 
        (.CI(\hs2_inferred__0/i__carry_n_0 ),
         .CO({\hs2_inferred__0/i__carry__0_n_0 ,\hs2_inferred__0/i__carry__0_n_1 ,\hs2_inferred__0/i__carry__0_n_2 ,\hs2_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0}),
+        .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3__0_n_0,i__carry__0_i_4_n_0}),
         .O(\NLW_hs2_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0,i__carry__0_i_8_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
@@ -1413,21 +1763,21 @@ module design_2_VGA_0_0_VGA
        (.CI(\hs2_inferred__0/i__carry__0_n_0 ),
         .CO({\hs2_inferred__0/i__carry__1_n_0 ,\hs2_inferred__0/i__carry__1_n_1 ,\hs2_inferred__0/i__carry__1_n_2 ,\hs2_inferred__0/i__carry__1_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__1_i_1_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0}),
+        .DI({i__carry__1_i_1_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3__0_n_0,i__carry__1_i_4_n_0}),
         .O(\NLW_hs2_inferred__0/i__carry__1_O_UNCONNECTED [3:0]),
         .S({i__carry__1_i_5_n_0,i__carry__1_i_6_n_0,i__carry__1_i_7_n_0,i__carry__1_i_8_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \hs2_inferred__0/i__carry__2 
        (.CI(\hs2_inferred__0/i__carry__1_n_0 ),
-        .CO({hs21_in,\hs2_inferred__0/i__carry__2_n_1 ,\hs2_inferred__0/i__carry__2_n_2 ,\hs2_inferred__0/i__carry__2_n_3 }),
+        .CO({hs22_in,\hs2_inferred__0/i__carry__2_n_1 ,\hs2_inferred__0/i__carry__2_n_2 ,\hs2_inferred__0/i__carry__2_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__2_i_1_n_0,i__carry__2_i_2_n_0,i__carry__2_i_3_n_0,i__carry__2_i_4_n_0}),
+        .DI({i__carry__2_i_1_n_0,i__carry__2_i_2_n_0,i__carry__2_i_3__0_n_0,i__carry__2_i_4_n_0}),
         .O(\NLW_hs2_inferred__0/i__carry__2_O_UNCONNECTED [3:0]),
         .S({i__carry__2_i_5_n_0,i__carry__2_i_6_n_0,i__carry__2_i_7_n_0,i__carry__2_i_8_n_0}));
   LUT2 #(
     .INIT(4'h7)) 
     hs_i_1
-       (.I0(hs21_in),
+       (.I0(hs22_in),
         .I1(hs2),
         .O(hs_i_1_n_0));
   FDCE #(
@@ -1465,14 +1815,14 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__0_i_3
-       (.I0(\hPos_reg_n_0_[10] ),
-        .I1(\hPos_reg_n_0_[11] ),
+       (.I0(\vPos_reg_n_0_[10] ),
+        .I1(\vPos_reg_n_0_[11] ),
         .O(i__carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__0_i_3__0
-       (.I0(\vPos_reg_n_0_[10] ),
-        .I1(\vPos_reg_n_0_[11] ),
+       (.I0(\hPos_reg_n_0_[10] ),
+        .I1(\hPos_reg_n_0_[11] ),
         .O(i__carry__0_i_3__0_n_0));
   LUT2 #(
     .INIT(4'h8)) 
@@ -1483,8 +1833,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_4__0
-       (.I0(\vPos_reg_n_0_[14] ),
-        .I1(\vPos_reg_n_0_[15] ),
+       (.I0(\vPos_reg_n_0_[15] ),
+        .I1(\vPos_reg_n_0_[14] ),
         .O(i__carry__0_i_4__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1495,8 +1845,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_5__0
-       (.I0(\vPos_reg_n_0_[12] ),
-        .I1(\vPos_reg_n_0_[13] ),
+       (.I0(\vPos_reg_n_0_[13] ),
+        .I1(\vPos_reg_n_0_[12] ),
         .O(i__carry__0_i_5__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1507,8 +1857,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__0_i_6__0
-       (.I0(\vPos_reg_n_0_[10] ),
-        .I1(\vPos_reg_n_0_[11] ),
+       (.I0(\vPos_reg_n_0_[11] ),
+        .I1(\vPos_reg_n_0_[10] ),
         .O(i__carry__0_i_6__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1555,14 +1905,14 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__1_i_3
-       (.I0(\hPos_reg_n_0_[18] ),
-        .I1(\hPos_reg_n_0_[19] ),
+       (.I0(\vPos_reg_n_0_[18] ),
+        .I1(\vPos_reg_n_0_[19] ),
         .O(i__carry__1_i_3_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__1_i_3__0
-       (.I0(\vPos_reg_n_0_[18] ),
-        .I1(\vPos_reg_n_0_[19] ),
+       (.I0(\hPos_reg_n_0_[18] ),
+        .I1(\hPos_reg_n_0_[19] ),
         .O(i__carry__1_i_3__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1585,8 +1935,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__1_i_5__0
-       (.I0(\vPos_reg_n_0_[22] ),
-        .I1(\vPos_reg_n_0_[23] ),
+       (.I0(\vPos_reg_n_0_[23] ),
+        .I1(\vPos_reg_n_0_[22] ),
         .O(i__carry__1_i_5__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1597,8 +1947,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__1_i_6__0
-       (.I0(\vPos_reg_n_0_[20] ),
-        .I1(\vPos_reg_n_0_[21] ),
+       (.I0(\vPos_reg_n_0_[21] ),
+        .I1(\vPos_reg_n_0_[20] ),
         .O(i__carry__1_i_6__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1609,8 +1959,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__1_i_7__0
-       (.I0(\vPos_reg_n_0_[18] ),
-        .I1(\vPos_reg_n_0_[19] ),
+       (.I0(\vPos_reg_n_0_[19] ),
+        .I1(\vPos_reg_n_0_[18] ),
         .O(i__carry__1_i_7__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1621,8 +1971,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__1_i_8__0
-       (.I0(\vPos_reg_n_0_[16] ),
-        .I1(\vPos_reg_n_0_[17] ),
+       (.I0(\vPos_reg_n_0_[17] ),
+        .I1(\vPos_reg_n_0_[16] ),
         .O(i__carry__1_i_8__0_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -1651,14 +2001,14 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__2_i_3
-       (.I0(\hPos_reg_n_0_[26] ),
-        .I1(\hPos_reg_n_0_[27] ),
+       (.I0(\vPos_reg_n_0_[26] ),
+        .I1(\vPos_reg_n_0_[27] ),
         .O(i__carry__2_i_3_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     i__carry__2_i_3__0
-       (.I0(\vPos_reg_n_0_[26] ),
-        .I1(\vPos_reg_n_0_[27] ),
+       (.I0(\hPos_reg_n_0_[26] ),
+        .I1(\hPos_reg_n_0_[27] ),
         .O(i__carry__2_i_3__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1681,8 +2031,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__2_i_5__0
-       (.I0(\vPos_reg_n_0_[30] ),
-        .I1(\vPos_reg_n_0_[31] ),
+       (.I0(\vPos_reg_n_0_[31] ),
+        .I1(\vPos_reg_n_0_[30] ),
         .O(i__carry__2_i_5__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1693,8 +2043,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__2_i_6__0
-       (.I0(\vPos_reg_n_0_[28] ),
-        .I1(\vPos_reg_n_0_[29] ),
+       (.I0(\vPos_reg_n_0_[29] ),
+        .I1(\vPos_reg_n_0_[28] ),
         .O(i__carry__2_i_6__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1705,8 +2055,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__2_i_7__0
-       (.I0(\vPos_reg_n_0_[26] ),
-        .I1(\vPos_reg_n_0_[27] ),
+       (.I0(\vPos_reg_n_0_[27] ),
+        .I1(\vPos_reg_n_0_[26] ),
         .O(i__carry__2_i_7__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1717,20 +2067,20 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     i__carry__2_i_8__0
-       (.I0(\vPos_reg_n_0_[24] ),
-        .I1(\vPos_reg_n_0_[25] ),
+       (.I0(\vPos_reg_n_0_[25] ),
+        .I1(\vPos_reg_n_0_[24] ),
         .O(i__carry__2_i_8__0_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i__carry_i_1
-       (.I0(\hPos_reg_n_0_[6] ),
-        .I1(\hPos_reg_n_0_[7] ),
+       (.I0(\vPos_reg_n_0_[4] ),
+        .I1(\vPos_reg_n_0_[5] ),
         .O(i__carry_i_1_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i__carry_i_1__0
-       (.I0(\vPos_reg_n_0_[4] ),
-        .I1(\vPos_reg_n_0_[5] ),
+       (.I0(\hPos_reg_n_0_[6] ),
+        .I1(\hPos_reg_n_0_[7] ),
         .O(i__carry_i_1__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1741,8 +2091,8 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h8)) 
     i__carry_i_2__0
-       (.I0(\vPos_reg_n_0_[2] ),
-        .I1(\vPos_reg_n_0_[3] ),
+       (.I0(\vPos_reg_n_0_[3] ),
+        .I1(\vPos_reg_n_0_[2] ),
         .O(i__carry_i_2__0_n_0));
   LUT2 #(
     .INIT(4'hE)) 
@@ -1781,16 +2131,16 @@ module design_2_VGA_0_0_VGA
         .I1(\vPos_reg_n_0_[4] ),
         .O(i__carry_i_5__0_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
-    i__carry_i_6
-       (.I0(\hPos_reg_n_0_[2] ),
-        .I1(\hPos_reg_n_0_[3] ),
-        .O(i__carry_i_6_n_0));
-  LUT2 #(
     .INIT(4'h2)) 
-    i__carry_i_6__0
+    i__carry_i_6
        (.I0(\vPos_reg_n_0_[3] ),
         .I1(\vPos_reg_n_0_[2] ),
+        .O(i__carry_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i__carry_i_6__0
+       (.I0(\hPos_reg_n_0_[2] ),
+        .I1(\hPos_reg_n_0_[3] ),
         .O(i__carry_i_6__0_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -1807,218 +2157,241 @@ module design_2_VGA_0_0_VGA
   LUT5 #(
     .INIT(32'h0000FFFE)) 
     \vPos[0]_i_1 
-       (.I0(\vPos[31]_i_4_n_0 ),
+       (.I0(\vPos[31]_i_6_n_0 ),
         .I1(\vPos[31]_i_5_n_0 ),
-        .I2(\vPos[31]_i_6_n_0 ),
-        .I3(\vPos[31]_i_7_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_3_n_0 ),
         .I4(\vPos_reg_n_0_[0] ),
         .O(\vPos[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[10]_i_1 
-       (.I0(\vPos_reg[12]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[12]_i_2_n_6 ),
         .O(\vPos[10]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[11]_i_1 
-       (.I0(\vPos_reg[12]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[12]_i_2_n_5 ),
         .O(\vPos[11]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[12]_i_1 
-       (.I0(\vPos_reg[12]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[12]_i_2_n_4 ),
         .O(\vPos[12]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[13]_i_1 
-       (.I0(\vPos_reg[16]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[16]_i_2_n_7 ),
         .O(\vPos[13]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[14]_i_1 
-       (.I0(\vPos_reg[16]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[16]_i_2_n_6 ),
         .O(\vPos[14]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[15]_i_1 
-       (.I0(\vPos_reg[16]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[16]_i_2_n_5 ),
         .O(\vPos[15]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[16]_i_1 
-       (.I0(\vPos_reg[16]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[16]_i_2_n_4 ),
         .O(\vPos[16]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[17]_i_1 
-       (.I0(\vPos_reg[20]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[20]_i_2_n_7 ),
         .O(\vPos[17]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[18]_i_1 
-       (.I0(\vPos_reg[20]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[20]_i_2_n_6 ),
         .O(\vPos[18]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[19]_i_1 
-       (.I0(\vPos_reg[20]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[20]_i_2_n_5 ),
         .O(\vPos[19]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[1]_i_1 
-       (.I0(\vPos_reg[4]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[4]_i_2_n_7 ),
         .O(\vPos[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[20]_i_1 
-       (.I0(\vPos_reg[20]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[20]_i_2_n_4 ),
         .O(\vPos[20]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[21]_i_1 
-       (.I0(\vPos_reg[24]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[24]_i_2_n_7 ),
         .O(\vPos[21]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[22]_i_1 
-       (.I0(\vPos_reg[24]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[24]_i_2_n_6 ),
         .O(\vPos[22]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[23]_i_1 
-       (.I0(\vPos_reg[24]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[24]_i_2_n_5 ),
         .O(\vPos[23]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[24]_i_1 
-       (.I0(\vPos_reg[24]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[24]_i_2_n_4 ),
         .O(\vPos[24]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[25]_i_1 
-       (.I0(\vPos_reg[28]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[28]_i_2_n_7 ),
         .O(\vPos[25]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[26]_i_1 
-       (.I0(\vPos_reg[28]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[28]_i_2_n_6 ),
         .O(\vPos[26]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[27]_i_1 
-       (.I0(\vPos_reg[28]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[28]_i_2_n_5 ),
         .O(\vPos[27]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[28]_i_1 
-       (.I0(\vPos_reg[28]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[28]_i_2_n_4 ),
         .O(\vPos[28]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[29]_i_1 
-       (.I0(\vPos_reg[31]_i_3_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[31]_i_7_n_7 ),
         .O(\vPos[29]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[2]_i_1 
-       (.I0(\vPos_reg[4]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[4]_i_2_n_6 ),
         .O(\vPos[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[30]_i_1 
-       (.I0(\vPos_reg[31]_i_3_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[31]_i_7_n_6 ),
         .O(\vPos[30]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0001)) 
@@ -2029,144 +2402,161 @@ module design_2_VGA_0_0_VGA
         .I3(\hPos[31]_i_5_n_0 ),
         .O(vPos));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'hFFFD)) 
     \vPos[31]_i_10 
+       (.I0(\vPos_reg_n_0_[9] ),
+        .I1(\vPos_reg_n_0_[8] ),
+        .I2(\vPos_reg_n_0_[31] ),
+        .I3(\vPos_reg_n_0_[30] ),
+        .O(\vPos[31]_i_10_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \vPos[31]_i_11 
+       (.I0(\vPos_reg_n_0_[28] ),
+        .I1(\vPos_reg_n_0_[29] ),
+        .O(\vPos[31]_i_11_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \vPos[31]_i_12 
+       (.I0(\vPos_reg_n_0_[22] ),
+        .I1(\vPos_reg_n_0_[23] ),
+        .O(\vPos[31]_i_12_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \vPos[31]_i_13 
+       (.I0(\vPos_reg_n_0_[20] ),
+        .I1(\vPos_reg_n_0_[21] ),
+        .O(\vPos[31]_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \vPos[31]_i_2 
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[31]_i_7_n_5 ),
+        .O(\vPos[31]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFEFFF)) 
+    \vPos[31]_i_3 
+       (.I0(\vPos_reg_n_0_[10] ),
+        .I1(\vPos_reg_n_0_[11] ),
+        .I2(\vPos_reg_n_0_[2] ),
+        .I3(\vPos_reg_n_0_[3] ),
+        .I4(\vPos[31]_i_8_n_0 ),
+        .I5(\vPos[31]_i_9_n_0 ),
+        .O(\vPos[31]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \vPos[31]_i_4 
+       (.I0(\vPos_reg_n_0_[6] ),
+        .I1(\vPos_reg_n_0_[7] ),
+        .I2(\vPos_reg_n_0_[4] ),
+        .I3(\vPos_reg_n_0_[5] ),
+        .I4(\vPos[31]_i_10_n_0 ),
+        .O(\vPos[31]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \vPos[31]_i_5 
        (.I0(\vPos_reg_n_0_[26] ),
         .I1(\vPos_reg_n_0_[27] ),
         .I2(\vPos_reg_n_0_[24] ),
         .I3(\vPos_reg_n_0_[25] ),
-        .O(\vPos[31]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \vPos[31]_i_11 
+        .I4(\vPos_reg_n_0_[1] ),
+        .I5(\vPos[31]_i_11_n_0 ),
+        .O(\vPos[31]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \vPos[31]_i_6 
        (.I0(\vPos_reg_n_0_[18] ),
         .I1(\vPos_reg_n_0_[19] ),
         .I2(\vPos_reg_n_0_[16] ),
         .I3(\vPos_reg_n_0_[17] ),
-        .O(\vPos[31]_i_11_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
-    \vPos[31]_i_2 
-       (.I0(\vPos_reg[31]_i_3_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
-        .O(\vPos[31]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \vPos[31]_i_4 
-       (.I0(\vPos_reg_n_0_[13] ),
-        .I1(\vPos_reg_n_0_[12] ),
-        .I2(\vPos_reg_n_0_[15] ),
-        .I3(\vPos_reg_n_0_[14] ),
-        .I4(\vPos[31]_i_8_n_0 ),
-        .O(\vPos[31]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \vPos[31]_i_5 
-       (.I0(\vPos_reg_n_0_[5] ),
-        .I1(\vPos_reg_n_0_[4] ),
-        .I2(\vPos_reg_n_0_[7] ),
-        .I3(\vPos_reg_n_0_[6] ),
-        .I4(\vPos[31]_i_9_n_0 ),
-        .O(\vPos[31]_i_5_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFBFFF)) 
-    \vPos[31]_i_6 
-       (.I0(\vPos_reg_n_0_[30] ),
-        .I1(\vPos_reg_n_0_[3] ),
-        .I2(\vPos_reg_n_0_[9] ),
-        .I3(\vPos_reg_n_0_[2] ),
-        .I4(\vPos[31]_i_10_n_0 ),
+        .I4(\vPos[31]_i_12_n_0 ),
+        .I5(\vPos[31]_i_13_n_0 ),
         .O(\vPos[31]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \vPos[31]_i_7 
-       (.I0(\vPos_reg_n_0_[21] ),
-        .I1(\vPos_reg_n_0_[20] ),
-        .I2(\vPos_reg_n_0_[23] ),
-        .I3(\vPos_reg_n_0_[22] ),
-        .I4(\vPos[31]_i_11_n_0 ),
-        .O(\vPos[31]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \vPos[31]_i_8 
-       (.I0(\vPos_reg_n_0_[10] ),
-        .I1(\vPos_reg_n_0_[11] ),
-        .I2(\vPos_reg_n_0_[8] ),
-        .I3(\vPos_reg_n_0_[28] ),
+       (.I0(\vPos_reg_n_0_[14] ),
+        .I1(\vPos_reg_n_0_[15] ),
         .O(\vPos[31]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \vPos[31]_i_9 
-       (.I0(\vPos_reg_n_0_[31] ),
-        .I1(\vPos_reg_n_0_[29] ),
-        .I2(\vPos_reg_n_0_[0] ),
-        .I3(\vPos_reg_n_0_[1] ),
+       (.I0(\vPos_reg_n_0_[12] ),
+        .I1(\vPos_reg_n_0_[13] ),
         .O(\vPos[31]_i_9_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[3]_i_1 
-       (.I0(\vPos_reg[4]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[4]_i_2_n_5 ),
         .O(\vPos[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[4]_i_1 
-       (.I0(\vPos_reg[4]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[4]_i_2_n_4 ),
         .O(\vPos[4]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[5]_i_1 
-       (.I0(\vPos_reg[8]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[8]_i_2_n_7 ),
         .O(\vPos[5]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[6]_i_1 
-       (.I0(\vPos_reg[8]_i_2_n_6 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[8]_i_2_n_6 ),
         .O(\vPos[6]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[7]_i_1 
-       (.I0(\vPos_reg[8]_i_2_n_5 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[8]_i_2_n_5 ),
         .O(\vPos[7]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[8]_i_1 
-       (.I0(\vPos_reg[8]_i_2_n_4 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[8]_i_2_n_4 ),
         .O(\vPos[8]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
     \vPos[9]_i_1 
-       (.I0(\vPos_reg[12]_i_2_n_7 ),
-        .I1(\vPos[31]_i_4_n_0 ),
-        .I2(\vPos[31]_i_5_n_0 ),
-        .I3(\vPos[31]_i_6_n_0 ),
-        .I4(\vPos[31]_i_7_n_0 ),
+       (.I0(\vPos_reg_n_0_[0] ),
+        .I1(\vPos[31]_i_3_n_0 ),
+        .I2(\vPos[31]_i_4_n_0 ),
+        .I3(\vPos[31]_i_5_n_0 ),
+        .I4(\vPos[31]_i_6_n_0 ),
+        .I5(\vPos_reg[12]_i_2_n_7 ),
         .O(\vPos[9]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -2409,12 +2799,12 @@ module design_2_VGA_0_0_VGA
         .D(\vPos[31]_i_2_n_0 ),
         .Q(\vPos_reg_n_0_[31] ));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \vPos_reg[31]_i_3 
+  CARRY4 \vPos_reg[31]_i_7 
        (.CI(\vPos_reg[28]_i_2_n_0 ),
-        .CO({\NLW_vPos_reg[31]_i_3_CO_UNCONNECTED [3:2],\vPos_reg[31]_i_3_n_2 ,\vPos_reg[31]_i_3_n_3 }),
+        .CO({\NLW_vPos_reg[31]_i_7_CO_UNCONNECTED [3:2],\vPos_reg[31]_i_7_n_2 ,\vPos_reg[31]_i_7_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_vPos_reg[31]_i_3_O_UNCONNECTED [3],\vPos_reg[31]_i_3_n_5 ,\vPos_reg[31]_i_3_n_6 ,\vPos_reg[31]_i_3_n_7 }),
+        .O({\NLW_vPos_reg[31]_i_7_O_UNCONNECTED [3],\vPos_reg[31]_i_7_n_5 ,\vPos_reg[31]_i_7_n_6 ,\vPos_reg[31]_i_7_n_7 }),
         .S({1'b0,\vPos_reg_n_0_[31] ,\vPos_reg_n_0_[30] ,\vPos_reg_n_0_[29] }));
   FDCE #(
     .INIT(1'b0)) 
@@ -2567,26 +2957,26 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__0_i_1
-       (.I0(\vPos_reg_n_0_[16] ),
-        .I1(\vPos_reg_n_0_[17] ),
+       (.I0(\vPos_reg_n_0_[17] ),
+        .I1(\vPos_reg_n_0_[16] ),
         .O(vs2_carry__0_i_1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__0_i_2
-       (.I0(\vPos_reg_n_0_[14] ),
-        .I1(\vPos_reg_n_0_[15] ),
+       (.I0(\vPos_reg_n_0_[15] ),
+        .I1(\vPos_reg_n_0_[14] ),
         .O(vs2_carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__0_i_3
-       (.I0(\vPos_reg_n_0_[12] ),
-        .I1(\vPos_reg_n_0_[13] ),
+       (.I0(\vPos_reg_n_0_[13] ),
+        .I1(\vPos_reg_n_0_[12] ),
         .O(vs2_carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__0_i_4
-       (.I0(\vPos_reg_n_0_[10] ),
-        .I1(\vPos_reg_n_0_[11] ),
+       (.I0(\vPos_reg_n_0_[11] ),
+        .I1(\vPos_reg_n_0_[10] ),
         .O(vs2_carry__0_i_4_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 vs2_carry__1
@@ -2599,26 +2989,26 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__1_i_1
-       (.I0(\vPos_reg_n_0_[24] ),
-        .I1(\vPos_reg_n_0_[25] ),
+       (.I0(\vPos_reg_n_0_[25] ),
+        .I1(\vPos_reg_n_0_[24] ),
         .O(vs2_carry__1_i_1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__1_i_2
-       (.I0(\vPos_reg_n_0_[22] ),
-        .I1(\vPos_reg_n_0_[23] ),
+       (.I0(\vPos_reg_n_0_[23] ),
+        .I1(\vPos_reg_n_0_[22] ),
         .O(vs2_carry__1_i_2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__1_i_3
-       (.I0(\vPos_reg_n_0_[20] ),
-        .I1(\vPos_reg_n_0_[21] ),
+       (.I0(\vPos_reg_n_0_[21] ),
+        .I1(\vPos_reg_n_0_[20] ),
         .O(vs2_carry__1_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__1_i_4
-       (.I0(\vPos_reg_n_0_[18] ),
-        .I1(\vPos_reg_n_0_[19] ),
+       (.I0(\vPos_reg_n_0_[19] ),
+        .I1(\vPos_reg_n_0_[18] ),
         .O(vs2_carry__1_i_4_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 vs2_carry__2
@@ -2631,20 +3021,20 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__2_i_1
-       (.I0(\vPos_reg_n_0_[30] ),
-        .I1(\vPos_reg_n_0_[31] ),
+       (.I0(\vPos_reg_n_0_[31] ),
+        .I1(\vPos_reg_n_0_[30] ),
         .O(vs2_carry__2_i_1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__2_i_2
-       (.I0(\vPos_reg_n_0_[28] ),
-        .I1(\vPos_reg_n_0_[29] ),
+       (.I0(\vPos_reg_n_0_[29] ),
+        .I1(\vPos_reg_n_0_[28] ),
         .O(vs2_carry__2_i_2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     vs2_carry__2_i_3
-       (.I0(\vPos_reg_n_0_[26] ),
-        .I1(\vPos_reg_n_0_[27] ),
+       (.I0(\vPos_reg_n_0_[27] ),
+        .I1(\vPos_reg_n_0_[26] ),
         .O(vs2_carry__2_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
@@ -2690,23 +3080,23 @@ module design_2_VGA_0_0_VGA
   LUT2 #(
     .INIT(4'h8)) 
     vs2_carry_i_8
-       (.I0(\vPos_reg_n_0_[2] ),
-        .I1(\vPos_reg_n_0_[3] ),
+       (.I0(\vPos_reg_n_0_[3] ),
+        .I1(\vPos_reg_n_0_[2] ),
         .O(vs2_carry_i_8_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \vs2_inferred__0/i__carry 
        (.CI(1'b0),
         .CO({\vs2_inferred__0/i__carry_n_0 ,\vs2_inferred__0/i__carry_n_1 ,\vs2_inferred__0/i__carry_n_2 ,\vs2_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b1),
-        .DI({1'b0,i__carry_i_1__0_n_0,i__carry_i_2__0_n_0,i__carry_i_3__0_n_0}),
+        .DI({1'b0,i__carry_i_1_n_0,i__carry_i_2__0_n_0,i__carry_i_3__0_n_0}),
         .O(\NLW_vs2_inferred__0/i__carry_O_UNCONNECTED [3:0]),
-        .S({i__carry_i_4_n_0,i__carry_i_5__0_n_0,i__carry_i_6__0_n_0,i__carry_i_7__0_n_0}));
+        .S({i__carry_i_4_n_0,i__carry_i_5__0_n_0,i__carry_i_6_n_0,i__carry_i_7__0_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \vs2_inferred__0/i__carry__0 
        (.CI(\vs2_inferred__0/i__carry_n_0 ),
         .CO({\vs2_inferred__0/i__carry__0_n_0 ,\vs2_inferred__0/i__carry__0_n_1 ,\vs2_inferred__0/i__carry__0_n_2 ,\vs2_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__0_i_1__0_n_0,i__carry__0_i_2__0_n_0,i__carry__0_i_3__0_n_0,\vPos_reg_n_0_[9] }),
+        .DI({i__carry__0_i_1__0_n_0,i__carry__0_i_2__0_n_0,i__carry__0_i_3_n_0,\vPos_reg_n_0_[9] }),
         .O(\NLW_vs2_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({i__carry__0_i_4__0_n_0,i__carry__0_i_5__0_n_0,i__carry__0_i_6__0_n_0,i__carry__0_i_7__0_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
@@ -2714,21 +3104,21 @@ module design_2_VGA_0_0_VGA
        (.CI(\vs2_inferred__0/i__carry__0_n_0 ),
         .CO({\vs2_inferred__0/i__carry__1_n_0 ,\vs2_inferred__0/i__carry__1_n_1 ,\vs2_inferred__0/i__carry__1_n_2 ,\vs2_inferred__0/i__carry__1_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__1_i_1__0_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0,i__carry__1_i_4__0_n_0}),
+        .DI({i__carry__1_i_1__0_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4__0_n_0}),
         .O(\NLW_vs2_inferred__0/i__carry__1_O_UNCONNECTED [3:0]),
         .S({i__carry__1_i_5__0_n_0,i__carry__1_i_6__0_n_0,i__carry__1_i_7__0_n_0,i__carry__1_i_8__0_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 \vs2_inferred__0/i__carry__2 
        (.CI(\vs2_inferred__0/i__carry__1_n_0 ),
-        .CO({vs20_in,\vs2_inferred__0/i__carry__2_n_1 ,\vs2_inferred__0/i__carry__2_n_2 ,\vs2_inferred__0/i__carry__2_n_3 }),
+        .CO({vs21_in,\vs2_inferred__0/i__carry__2_n_1 ,\vs2_inferred__0/i__carry__2_n_2 ,\vs2_inferred__0/i__carry__2_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry__2_i_1__0_n_0,i__carry__2_i_2__0_n_0,i__carry__2_i_3__0_n_0,i__carry__2_i_4__0_n_0}),
+        .DI({i__carry__2_i_1__0_n_0,i__carry__2_i_2__0_n_0,i__carry__2_i_3_n_0,i__carry__2_i_4__0_n_0}),
         .O(\NLW_vs2_inferred__0/i__carry__2_O_UNCONNECTED [3:0]),
         .S({i__carry__2_i_5__0_n_0,i__carry__2_i_6__0_n_0,i__carry__2_i_7__0_n_0,i__carry__2_i_8__0_n_0}));
   LUT2 #(
     .INIT(4'h7)) 
     vs_i_1
-       (.I0(vs20_in),
+       (.I0(vs21_in),
         .I1(vs2),
         .O(vs_i_1_n_0));
   FDCE #(

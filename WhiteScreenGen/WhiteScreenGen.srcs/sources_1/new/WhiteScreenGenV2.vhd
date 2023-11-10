@@ -132,7 +132,7 @@ begin
         B <= '0';
     elsif(clk25'event and clk25 = '1')then
         if(de = '1')then
-          R <= '0';
+          R <= '1';
           G <= '0';
           B <= '0';
         else

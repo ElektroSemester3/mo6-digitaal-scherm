@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Nov  7 14:26:27 2023
+--Date        : Thu Nov  9 17:10:03 2023
 --Host        : LaptopVanLars running 64-bit major release  (build 9200)
 --Command     : generate_target design_2_wrapper.bd
 --Design      : design_2_wrapper
@@ -19,11 +19,8 @@ entity design_2_wrapper is
     HSYNC : out STD_LOGIC;
     R : out STD_LOGIC;
     VSYNC : out STD_LOGIC;
-    hpxlOut : out STD_LOGIC;
-    pxlClkOut : out STD_LOGIC;
     rst : in STD_LOGIC;
-    sys_clock : in STD_LOGIC;
-    vPxlOut : out STD_LOGIC
+    sys_clock : in STD_LOGIC
   );
 end design_2_wrapper;
 
@@ -36,10 +33,7 @@ architecture STRUCTURE of design_2_wrapper is
     R : out STD_LOGIC;
     G : out STD_LOGIC;
     B : out STD_LOGIC;
-    rst : in STD_LOGIC;
-    pxlClkOut : out STD_LOGIC;
-    hpxlOut : out STD_LOGIC;
-    vPxlOut : out STD_LOGIC
+    rst : in STD_LOGIC
   );
   end component design_2;
 begin
@@ -50,10 +44,7 @@ design_2_i: component design_2
       HSYNC => HSYNC,
       R => R,
       VSYNC => VSYNC,
-      hpxlOut => hpxlOut,
-      pxlClkOut => pxlClkOut,
       rst => rst,
-      sys_clock => sys_clock,
-      vPxlOut => vPxlOut
+      sys_clock => sys_clock
     );
 end STRUCTURE;
