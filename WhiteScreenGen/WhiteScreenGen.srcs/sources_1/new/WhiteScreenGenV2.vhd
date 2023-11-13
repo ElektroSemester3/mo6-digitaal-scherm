@@ -5,10 +5,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity VGA is
   port(
       CLK, RST: in STD_LOGIC;
-      VCLK, HSYNC, VSYNC: out STD_LOGIC;
+      pxlCLK, HSYNC, VSYNC: out STD_LOGIC;
       R, G, B: out STD_LOGIC;
-      vpxl, hpxl: out STD_LOGIC_VECTOR (9 downto 0);
-      btn1, btn2, btn3: in STD_LOGIC
+      vpxl, hpxl: out STD_LOGIC_VECTOR (9 downto 0)
       );
 end entity VGA;
 
@@ -36,7 +35,7 @@ architecture rtl of VGA is
 begin
 
 -- outputs
-VCLK <= clk25;
+pxlCLK <= clk25;
 
 clk_div:process(CLK)
 begin
@@ -89,11 +88,11 @@ begin
         HSYNC <= '0';
     elsif(clk25'event and clk25 = '1')then
         if((hPos >= (HD + HFP)) AND (hPos < HD + HFP + HSP))then
-            hs <= '0';
+            hs  <= '0';
         else
-            hs <= '1';
+            hs  <= '1';
         end if;
-        HSYNC <= hs; -- delay one clock to account for pixel data delay
+        HSYNC <= hs ; -- delay one clock to account for pixel data delay
     end if;
 end process;
 
@@ -133,9 +132,9 @@ begin
         B <= '0';
     elsif(clk25'event and clk25 = '1')then
         if(de = '1')then
-          R <= btn1;
-          G <= btn2;
-          B <= btn3;
+          R <= '1';
+          G <= '0';
+          B <= '0';
         else
           R <= '0';
           G <= '0';

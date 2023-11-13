@@ -3,92 +3,292 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Oct 30 11:38:27 2023
-# Process ID: 15760
-# Current directory: C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11300 C:\Users\lscho\OneDrive\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.xpr
-# Log file: C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/vivado.log
-# Journal file: C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen\vivado.jou
-# Running On: LaptopVanLars, OS: Windows, CPU Frequency: 1797 MHz, CPU Physical cores: 16, Host memory: 16456 MB
+# Start of session at: Fri Nov 10 11:00:36 2023
+# Process ID: 8796
+# Current directory: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12016 C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.xpr
+# Log file: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/vivado.log
+# Journal file: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen\vivado.jou
+# Running On: DESKTOP-0BAPC61, OS: Windows, CPU Frequency: 3893 MHz, CPU Physical cores: 12, Host memory: 33746 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.xpr
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/lscho/OneDrive/Documents/GitHub/Digitaal-MO6-Pong/ScreenGen/WhiteScreenGen' since last save.
+open_project C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen' since last save.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2441.504 ; gain = 389.699
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.426 ; gain = 447.711
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/WhiteScreenGen.vhd] -no_script -reset -force -quiet
-remove_files  C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/WhiteScreenGen.vhd
-file delete -force C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/WhiteScreenGen.vhd
-update_module_reference design_1_WhiteScreenGen_0_0
-ERROR: [filemgmt 56-587] Failed to resolve reference. Nothing was found in the project to match the name WhiteScreenGen Try changing the compile order from manual to automatic. 
-ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
-open_bd_design {C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1/design_1.bd}
-Reading block design file <C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1/design_1.bd>...
-Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
-Adding component instance block -- xilinx.com:module_ref:WhiteScreenGen:1.0 - WhiteScreenGen_0
-CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/WhiteScreenGen_0'.
-Given inputs for module-source, Top-module name : WhiteScreenGen, Module Type : RTL.
-Please review and update or add design-sources to this project to resolve this module-reference.
-Successfully read diagram <design_1> from block design file <C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2540.883 ; gain = 40.141
-export_ip_user_files -of_objects  [get_files C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd] -no_script -reset -force -quiet
-remove_files  C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-file delete -force C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-export_ip_user_files -of_objects  [get_files C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
-remove_files  C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1/design_1.bd
-Wrote  : <C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-file delete -force C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_1
-file delete -force c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_1
-open_bd_design {C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd}
-Reading block design file <C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd>...
+update_module_reference design_2_Universal_signal_del_0_1
+Reading block design file <C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd>...
 Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
 Adding component instance block -- xilinx.com:module_ref:VGA:1.0 - VGA_0
-Successfully read diagram <design_2> from block design file <C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd>
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 11:43:45 2023...
+Adding component instance block -- xilinx.com:module_ref:Universal_signal_delay:1.0 - Universal_signal_del_0
+Successfully read diagram <design_2> from block design file <C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd>
+Upgrading 'C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_2_Universal_signal_del_0_1 to use current project options
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+Wrote  : <C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/ui/bd_1fdbff51.ui> 
+upgrade_ip: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1653.867 ; gain = 159.441
+update_module_reference: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1653.867 ; gain = 159.441
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/utils_1/imports/synth_1/WhiteScreenGen.dcp with file C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/design_2_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/synth/design_2.vhd
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/sim/design_2.vhd
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hdl/design_2_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Universal_signal_del_0 .
+Exporting to file c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hw_handoff/design_2.hwh
+Generated Hardware Definition File c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/synth/design_2.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_2_Universal_signal_del_0_1
+[Fri Nov 10 11:07:22 2023] Launched design_2_Universal_signal_del_0_1_synth_1...
+Run output will be captured here: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1/runme.log
+[Fri Nov 10 11:07:22 2023] Launched synth_1...
+Run output will be captured here: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1870.418 ; gain = 216.551
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1.dcp' for cell 'design_2_i/Universal_signal_del_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_VGA_0_0/design_2_VGA_0_0.dcp' for cell 'design_2_i/VGA_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.dcp' for cell 'design_2_i/clk_wiz'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2054.777 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc] for cell 'design_2_i/clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc] for cell 'design_2_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc] for cell 'design_2_i/clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc] for cell 'design_2_i/clk_wiz/inst'
+Parsing XDC File [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+Finished Parsing XDC File [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2755.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 2770.020 ; gain = 868.457
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:33]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:33]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:33]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:34]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:34]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:34]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:35]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:35]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:35]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'downto' [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/new/Universal_signal_delay.vhd:35]
+open_bd_design {C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.hPxlDelay {5} \
+  CONFIG.hSyncDelay {5} \
+  CONFIG.pxlClkDelay {5} \
+  CONFIG.vPxlDelay {5} \
+  CONFIG.vSyncDelay {5} \
+] [get_bd_cells Universal_signal_del_0]
+endgroup
+update_module_reference design_2_Universal_signal_del_0_1
+Upgrading 'C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_2_Universal_signal_del_0_1 to use current project options
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+Wrote  : <C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/ui/bd_1fdbff51.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/utils_1/imports/synth_1/WhiteScreenGen.dcp with file C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/design_2_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/synth/design_2.vhd
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/sim/design_2.vhd
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hdl/design_2_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Universal_signal_del_0 .
+Exporting to file c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hw_handoff/design_2.hwh
+Generated Hardware Definition File c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/synth/design_2.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_2_Universal_signal_del_0_1
+[Fri Nov 10 11:14:30 2023] Launched design_2_Universal_signal_del_0_1_synth_1...
+Run output will be captured here: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1/runme.log
+[Fri Nov 10 11:14:30 2023] Launched synth_1...
+Run output will be captured here: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1.dcp' for cell 'design_2_i/Universal_signal_del_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_VGA_0_0/design_2_VGA_0_0.dcp' for cell 'design_2_i/VGA_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.dcp' for cell 'design_2_i/clk_wiz'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2816.832 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc] for cell 'design_2_i/clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc] for cell 'design_2_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc] for cell 'design_2_i/clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc] for cell 'design_2_i/clk_wiz/inst'
+Parsing XDC File [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+Finished Parsing XDC File [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2899.785 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_bd_design {C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.hPxlDelay {500} \
+  CONFIG.hSyncDelay {500} \
+  CONFIG.pxlClkDelay {500} \
+  CONFIG.vPxlDelay {500} \
+  CONFIG.vSyncDelay {500} \
+] [get_bd_cells Universal_signal_del_0]
+endgroup
+reset_run design_2_Universal_signal_del_0_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1
+
+save_bd_design
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+Wrote  : <C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/ui/bd_1fdbff51.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/utils_1/imports/synth_1/WhiteScreenGen.dcp with file C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/design_2_wrapper.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/synth/design_2.vhd
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/sim/design_2.vhd
+VHDL Output written to : c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hdl/design_2_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Universal_signal_del_0 .
+Exporting to file c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/hw_handoff/design_2.hwh
+Generated Hardware Definition File c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/synth/design_2.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_2_Universal_signal_del_0_1
+[Fri Nov 10 13:33:36 2023] Launched design_2_Universal_signal_del_0_1_synth_1...
+Run output will be captured here: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1/runme.log
+[Fri Nov 10 13:33:36 2023] Launched synth_1...
+Run output will be captured here: C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1.dcp' for cell 'design_2_i/Universal_signal_del_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_VGA_0_0/design_2_VGA_0_0.dcp' for cell 'design_2_i/VGA_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.dcp' for cell 'design_2_i/clk_wiz'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3388.965 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc] for cell 'design_2_i/clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0_board.xdc] for cell 'design_2_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc] for cell 'design_2_i/clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_clk_wiz_0/design_2_clk_wiz_0.xdc] for cell 'design_2_i/clk_wiz/inst'
+Parsing XDC File [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+Finished Parsing XDC File [C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/constrs_1/new/pindef.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3388.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_bd_design {C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.hPxlDelay {5} \
+  CONFIG.hSyncDelay {5} \
+  CONFIG.pxlClkDelay {5} \
+  CONFIG.vPxlDelay {5} \
+  CONFIG.vSyncDelay {5} \
+] [get_bd_cells Universal_signal_del_0]
+endgroup
+update_module_reference design_2_Universal_signal_del_0_1
+Upgrading 'C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/design_2.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_Universal_signal_del_0_1_synth_1
+
+INFO: [IP_Flow 19-3420] Updated design_2_Universal_signal_del_0_1 to use current project options
+Wrote  : <C:\Users\lscho\Documents\GitHub\mo6-digitaal-scherm\WhiteScreenGen\WhiteScreenGen.srcs\sources_1\bd\design_2\design_2.bd> 
+Wrote  : <C:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.srcs/sources_1/bd/design_2/ui/bd_1fdbff51.ui> 

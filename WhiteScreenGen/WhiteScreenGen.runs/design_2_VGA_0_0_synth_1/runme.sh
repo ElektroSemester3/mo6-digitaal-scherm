@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/lscho/OneDrive/Documents/GitHub/Digitaal-MO6-Pong/ScreenGen/WhiteScreenGen/WhiteScreenGen.runs/design_2_VGA_0_0_synth_1'
+HD_PWD='C:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.runs/design_2_VGA_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

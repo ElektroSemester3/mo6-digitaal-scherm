@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 25 08:48:16 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Nov 13 10:14:30 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_2" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -9,14 +9,14 @@
         <CONNECTION INSTANCE="clk_wiz" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="VGA_0_HSYNC">
+    <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="Universal_signal_del_0_hSyncOut">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="VGA_0" PORT="HSYNC"/>
+        <CONNECTION INSTANCE="Universal_signal_del_0" PORT="hSyncOut"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="VSYNC" SIGIS="undef" SIGNAME="VGA_0_VSYNC">
+    <PORT DIR="O" NAME="VSYNC" SIGIS="undef" SIGNAME="Universal_signal_del_0_vSyncOut">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="VGA_0" PORT="VSYNC"/>
+        <CONNECTION INSTANCE="Universal_signal_del_0" PORT="vSyncOut"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="R" SIGIS="undef" SIGNAME="VGA_0_R">
@@ -39,26 +39,64 @@
         <CONNECTION INSTANCE="VGA_0" PORT="RST"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="btn1" SIGIS="undef" SIGNAME="External_Ports_btn1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="VGA_0" PORT="btn1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="VGA_0" PORT="btn2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="btn3" SIGIS="undef" SIGNAME="External_Ports_btn3">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="VGA_0" PORT="btn3"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
 
   <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Universal_signal_del_0" HWVERSION="1.0" INSTANCE="Universal_signal_del_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Universal_signal_delay" VLNV="xilinx.com:module_ref:Universal_signal_delay:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="hSyncDelay" VALUE="5"/>
+        <PARAMETER NAME="vSyncDelay" VALUE="5"/>
+        <PARAMETER NAME="pxlClkDelay" VALUE="5"/>
+        <PARAMETER NAME="vPxlDelay" VALUE="5"/>
+        <PARAMETER NAME="hPxlDelay" VALUE="5"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_2_Universal_signal_del_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="hSyncIn" SIGIS="undef" SIGNAME="VGA_0_HSYNC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_0" PORT="HSYNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vSyncIn" SIGIS="undef" SIGNAME="VGA_0_VSYNC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_0" PORT="VSYNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxlClkIn" SIGIS="undef" SIGNAME="VGA_0_pxlCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_0" PORT="pxlCLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hPxlIn" SIGIS="undef" SIGNAME="VGA_0_hpxl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_0" PORT="hpxl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vPxlIn" SIGIS="undef" SIGNAME="VGA_0_vpxl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="VGA_0" PORT="vpxl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hSyncOut" SIGIS="undef" SIGNAME="Universal_signal_del_0_hSyncOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="HSYNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vSyncOut" SIGIS="undef" SIGNAME="Universal_signal_del_0_vSyncOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="VSYNC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxlClkOut" SIGIS="undef"/>
+        <PORT DIR="O" NAME="hPxlOut" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vPxlOut" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/VGA_0" HWVERSION="1.0" INSTANCE="VGA_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="VGA" VLNV="xilinx.com:module_ref:VGA:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -76,15 +114,19 @@
             <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="VCLK" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pxlCLK" SIGIS="undef" SIGNAME="VGA_0_pxlCLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Universal_signal_del_0" PORT="pxlClkIn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="HSYNC" SIGIS="undef" SIGNAME="VGA_0_HSYNC">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="HSYNC"/>
+            <CONNECTION INSTANCE="Universal_signal_del_0" PORT="hSyncIn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="VSYNC" SIGIS="undef" SIGNAME="VGA_0_VSYNC">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="VSYNC"/>
+            <CONNECTION INSTANCE="Universal_signal_del_0" PORT="vSyncIn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="R" SIGIS="undef" SIGNAME="VGA_0_R">
@@ -102,21 +144,14 @@
             <CONNECTION INSTANCE="External_Ports" PORT="B"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="9" NAME="vpxl" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="9" NAME="hpxl" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="btn1" SIGIS="undef" SIGNAME="External_Ports_btn1">
+        <PORT DIR="O" LEFT="9" NAME="vpxl" RIGHT="0" SIGIS="undef" SIGNAME="VGA_0_vpxl">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="btn1"/>
+            <CONNECTION INSTANCE="Universal_signal_del_0" PORT="vPxlIn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
+        <PORT DIR="O" LEFT="9" NAME="hpxl" RIGHT="0" SIGIS="undef" SIGNAME="VGA_0_hpxl">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="btn2"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="btn3" SIGIS="undef" SIGNAME="External_Ports_btn3">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="btn3"/>
+            <CONNECTION INSTANCE="Universal_signal_del_0" PORT="hPxlIn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

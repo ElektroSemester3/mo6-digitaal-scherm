@@ -57,17 +57,14 @@ ENTITY design_2_VGA_0_0 IS
   PORT (
     CLK : IN STD_LOGIC;
     RST : IN STD_LOGIC;
-    VCLK : OUT STD_LOGIC;
+    pxlCLK : OUT STD_LOGIC;
     HSYNC : OUT STD_LOGIC;
     VSYNC : OUT STD_LOGIC;
     R : OUT STD_LOGIC;
     G : OUT STD_LOGIC;
     B : OUT STD_LOGIC;
     vpxl : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    hpxl : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-    btn1 : IN STD_LOGIC;
-    btn2 : IN STD_LOGIC;
-    btn3 : IN STD_LOGIC
+    hpxl : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
   );
 END design_2_VGA_0_0;
 
@@ -78,17 +75,14 @@ ARCHITECTURE design_2_VGA_0_0_arch OF design_2_VGA_0_0 IS
     PORT (
       CLK : IN STD_LOGIC;
       RST : IN STD_LOGIC;
-      VCLK : OUT STD_LOGIC;
+      pxlCLK : OUT STD_LOGIC;
       HSYNC : OUT STD_LOGIC;
       VSYNC : OUT STD_LOGIC;
       R : OUT STD_LOGIC;
       G : OUT STD_LOGIC;
       B : OUT STD_LOGIC;
       vpxl : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-      hpxl : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
-      btn1 : IN STD_LOGIC;
-      btn2 : IN STD_LOGIC;
-      btn3 : IN STD_LOGIC
+      hpxl : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
     );
   END COMPONENT VGA;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -110,16 +104,13 @@ BEGIN
     PORT MAP (
       CLK => CLK,
       RST => RST,
-      VCLK => VCLK,
+      pxlCLK => pxlCLK,
       HSYNC => HSYNC,
       VSYNC => VSYNC,
       R => R,
       G => G,
       B => B,
       vpxl => vpxl,
-      hpxl => hpxl,
-      btn1 => btn1,
-      btn2 => btn2,
-      btn3 => btn3
+      hpxl => hpxl
     );
 END design_2_VGA_0_0_arch;
