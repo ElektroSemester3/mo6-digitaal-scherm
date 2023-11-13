@@ -15,4 +15,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_VG
 # IP: bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_Universal_signal_del_0_1 || ORIG_REF_NAME==design_2_Universal_signal_del_0_1} -quiet] -quiet
 
-# XDC: c:/Users/lscho/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/design_2_ooc.xdc
+# XDC: c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/design_2_ooc.xdc
