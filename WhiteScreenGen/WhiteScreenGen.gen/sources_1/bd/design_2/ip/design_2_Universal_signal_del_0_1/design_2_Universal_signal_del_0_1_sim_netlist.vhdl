@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Fri Nov 10 11:15:04 2023
--- Host        : DESKTOP-0BAPC61 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_2_Universal_signal_del_0_1 -prefix
---               design_2_Universal_signal_del_0_1_ design_2_Universal_signal_del_0_1_sim_netlist.vhdl
+-- Date        : Wed Nov 15 09:30:37 2023
+-- Host        : LaptopVanLars running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1_sim_netlist.vhdl
 -- Design      : design_2_Universal_signal_del_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,6 +27,8 @@ entity design_2_Universal_signal_del_0_1_Universal_signal_delay is
     hPxlIn : in STD_LOGIC;
     vPxlIn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_2_Universal_signal_del_0_1_Universal_signal_delay : entity is "Universal_signal_delay";
 end design_2_Universal_signal_del_0_1_Universal_signal_delay;
 
 architecture STRUCTURE of design_2_Universal_signal_del_0_1_Universal_signal_delay is

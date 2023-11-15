@@ -8,7 +8,6 @@ entity Universal_signal_delay is
     generic( 
         hSyncDelay   :  natural :=1;
         vSyncDelay   :  natural :=1;
-        pxlClkDelay  :  natural :=1;
         vPxlDelay    :  natural :=1;
         hPxlDelay    :  natural :=1
     );
@@ -41,23 +40,18 @@ begin
     begin
         if rising_edge(pxlClkIn)then
             
-            --shift the signals 1 spot left
-            SR_hSync                 <= shift_left(SR_hSync,1);
-            SR_vSync                 <= shift_left(SR_vSync,1);
-            SR_hPxl                  <= shift_left(SR_hPxl,1);
-            SR_vPxl                  <= shift_left(SR_vPxl,1);
-            
-            --set the new values in the first bit
-            SR_hSync(SR_hSync'LOW)   <= hSyncIn;
-            SR_vSync(SR_vSync'LOW)   <= vSyncIn;
-            SR_hPxl(SR_hPxl'LOW)     <= hPxlIn;
-            SR_vPxl(SR_vPxl'LOW)     <= vPxlIn;
+            --shift the signals 1 spot left, and add the new bit
+            SR_hSync(SR_hSync'length-1 downto 0) <= SR_hSync(SR_hSync'length -2 downto 0) & hSyncIn;
+            SR_vSync(SR_vSync'length-1 downto 0) <= SR_vSync(SR_vSync'length -2 downto 0) & vSyncIn;
+            SR_hPxl(SR_hPxl'length-1 downto 0) <= SR_hPxl(SR_hPxl'length -2 downto 0) & hPxlIn;
+            sr_vpxl(sr_vpxl'length-1 downto 0) <= sr_vpxl(sr_vpxl'length -2 downto 0) & vpxlin;
 
             --read the last bit and set it to the output
             hSyncOut                 <= SR_hSync(SR_hSync'HIGH);
             vSyncOut                 <= SR_vSync(SR_vSync'HIGH);
             hPxlOut                  <= SR_hPxl(SR_hPxl'HIGH);
             vPxlOut                  <= SR_vPxl(SR_vPxl'HIGH);
+            
         end if;
     end process;
 end Behavioral;

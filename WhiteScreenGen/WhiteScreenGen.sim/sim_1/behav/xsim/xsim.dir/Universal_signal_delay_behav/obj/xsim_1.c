@@ -75,8 +75,8 @@ const int NumRelocateId= 15;
 void relocate(char *dp)
 {
 	iki_relocate(dp, "xsim.dir/Universal_signal_delay_behav/xsim.reloc",  (void **)funcTab, 15);
-	iki_vhdl_file_variable_register(dp + 11144);
-	iki_vhdl_file_variable_register(dp + 11200);
+	iki_vhdl_file_variable_register(dp + 11120);
+	iki_vhdl_file_variable_register(dp + 11176);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */

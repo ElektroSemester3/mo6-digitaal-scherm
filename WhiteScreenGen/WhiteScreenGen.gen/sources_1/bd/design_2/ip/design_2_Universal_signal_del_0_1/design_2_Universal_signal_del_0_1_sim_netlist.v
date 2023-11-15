@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Fri Nov 10 11:15:04 2023
-// Host        : DESKTOP-0BAPC61 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_2_Universal_signal_del_0_1 -prefix
-//               design_2_Universal_signal_del_0_1_ design_2_Universal_signal_del_0_1_sim_netlist.v
+// Date        : Wed Nov 15 09:30:37 2023
+// Host        : LaptopVanLars running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1_sim_netlist.v
 // Design      : design_2_Universal_signal_del_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,6 +13,55 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "design_2_Universal_signal_del_0_1,Universal_signal_delay,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "Universal_signal_delay,Vivado 2023.1" *) 
+(* NotValidForBitStream *)
+module design_2_Universal_signal_del_0_1
+   (hSyncIn,
+    vSyncIn,
+    pxlClkIn,
+    hPxlIn,
+    vPxlIn,
+    hSyncOut,
+    vSyncOut,
+    pxlClkOut,
+    hPxlOut,
+    vPxlOut);
+  input hSyncIn;
+  input vSyncIn;
+  input pxlClkIn;
+  input hPxlIn;
+  input vPxlIn;
+  output hSyncOut;
+  output vSyncOut;
+  output pxlClkOut;
+  output hPxlOut;
+  output vPxlOut;
+
+  wire hPxlIn;
+  wire hPxlOut;
+  wire hSyncIn;
+  wire hSyncOut;
+  wire pxlClkIn;
+  wire vPxlIn;
+  wire vPxlOut;
+  wire vSyncIn;
+  wire vSyncOut;
+
+  assign pxlClkOut = pxlClkIn;
+  design_2_Universal_signal_del_0_1_Universal_signal_delay U0
+       (.hPxlIn(hPxlIn),
+        .hPxlOut(hPxlOut),
+        .hSyncIn(hSyncIn),
+        .hSyncOut(hSyncOut),
+        .pxlClkIn(pxlClkIn),
+        .vPxlIn(vPxlIn),
+        .vPxlOut(vPxlOut),
+        .vSyncIn(vSyncIn),
+        .vSyncOut(vSyncOut));
+endmodule
+
+(* ORIG_REF_NAME = "Universal_signal_delay" *) 
 module design_2_Universal_signal_del_0_1_Universal_signal_delay
    (hSyncOut,
     vSyncOut,
@@ -167,54 +216,6 @@ module design_2_Universal_signal_del_0_1_Universal_signal_delay
         .D(\SR_vSync_reg[5]_srl5_n_0 ),
         .Q(vSyncOut),
         .R(1'b0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "design_2_Universal_signal_del_0_1,Universal_signal_delay,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "Universal_signal_delay,Vivado 2023.1" *) 
-(* NotValidForBitStream *)
-module design_2_Universal_signal_del_0_1
-   (hSyncIn,
-    vSyncIn,
-    pxlClkIn,
-    hPxlIn,
-    vPxlIn,
-    hSyncOut,
-    vSyncOut,
-    pxlClkOut,
-    hPxlOut,
-    vPxlOut);
-  input hSyncIn;
-  input vSyncIn;
-  input pxlClkIn;
-  input hPxlIn;
-  input vPxlIn;
-  output hSyncOut;
-  output vSyncOut;
-  output pxlClkOut;
-  output hPxlOut;
-  output vPxlOut;
-
-  wire hPxlIn;
-  wire hPxlOut;
-  wire hSyncIn;
-  wire hSyncOut;
-  wire pxlClkIn;
-  wire vPxlIn;
-  wire vPxlOut;
-  wire vSyncIn;
-  wire vSyncOut;
-
-  assign pxlClkOut = pxlClkIn;
-  design_2_Universal_signal_del_0_1_Universal_signal_delay U0
-       (.hPxlIn(hPxlIn),
-        .hPxlOut(hPxlOut),
-        .hSyncIn(hSyncIn),
-        .hSyncOut(hSyncOut),
-        .pxlClkIn(pxlClkIn),
-        .vPxlIn(vPxlIn),
-        .vPxlOut(vPxlOut),
-        .vSyncIn(vSyncIn),
-        .vSyncOut(vSyncOut));
 endmodule
 `ifndef GLBL
 `define GLBL
