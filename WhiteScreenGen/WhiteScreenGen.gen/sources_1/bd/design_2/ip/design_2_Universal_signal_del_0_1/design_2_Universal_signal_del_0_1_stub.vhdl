@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Fri Nov 10 11:15:04 2023
--- Host        : DESKTOP-0BAPC61 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_2_Universal_signal_del_0_1 -prefix
---               design_2_Universal_signal_del_0_1_ design_2_Universal_signal_del_0_1_stub.vhdl
+-- Date        : Wed Nov 15 09:30:37 2023
+-- Host        : LaptopVanLars running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/Users/lscho/OneDrive/Documents/GitHub/mo6-digitaal-scherm/WhiteScreenGen/WhiteScreenGen.gen/sources_1/bd/design_2/ip/design_2_Universal_signal_del_0_1/design_2_Universal_signal_del_0_1_stub.vhdl
 -- Design      : design_2_Universal_signal_del_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

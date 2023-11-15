@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1699866871" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/WhiteScreenGen.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1700036979" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/WhiteScreenGen.dcp">
   <File Type="PA-TCL" Name="design_2_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_2_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_2_wrapper_reports.tcl"/>
@@ -74,4 +74,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_2_clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_VGA_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_Universal_signal_del_0_1"/>
 </GenRun>
